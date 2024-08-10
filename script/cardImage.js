@@ -34,7 +34,7 @@ export function addButton(buttonId){
 
     // 创建图片元素  
     const img = document.createElement('img');  
-    img.src = "../gakumas-data/images/skillCards/icons/"+buttonId.icon+".png";  
+    img.src = "kkeGuessCard/gakumas-data/images/skillCards/icons/"+buttonId.icon+".png";  
     img.style.width = '100%'; // 设置图片宽度填满按钮  
     img.style.maxWidth = '6rem'; // 设置图片最大宽度  
 
