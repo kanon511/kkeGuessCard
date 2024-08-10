@@ -1,0 +1,76 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>学马仕猜卡小游戏</title>  
+    <link href="./css/bootstrap.min.css" rel="stylesheet">  
+    <style>  
+        .list-group-container {  
+            flex: 1;  
+            min-width: 300px; /* 设置最小宽度以避免过于扁平 */  
+            margin-top: 20px;  
+        }
+        @media (min-width: 768px) {  
+            .main {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }  
+        }
+        .btn-padding {
+            --bs-btn-padding-x: 0;
+            --bs-btn-padding-y: 0;
+            border:none;
+
+        }
+    </style>  
+</head>  
+<body>  
+
+<div class="container">  
+    <h1 class="text-center">学马仕猜卡小游戏</h1> 
+    <p>
+        玩法说明：<br>
+        每局游戏后台随机生成一张卡，这张卡即为目标卡，猜出这张卡即为游戏目标<br>
+        你可以选择一张卡，并了解到它与目标卡的相似程度（0-1，0为无任何相似点，1为目标卡）<br>
+        相似程度根据多项指标综合判断<br>
+        尽可能使用少的次数猜出目标卡吧<br>
+        <a href="https://github.com/kanon511/kkeGuessCard">游戏github链接</a>
+    </p>
+    <div class="main container" >
+        <div class="card col-md-6" style="margin-right: 5%;">
+            <div id="categoriesContainer"></div>
+
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                <div class="image-display" style="width: 70%;">  
+                    <img id="displayedImage" src="" alt="图片展示" style="max-width: 100%; display: none;">  
+                </div>
+                <button type="button" class="btn btn-primary m-1" style="width: 15%;" id="guessCard">猜这张卡！</button>
+            </div>
+
+            <div class="button-container" id="buttonContainer" data-spy="scroll" data-target="#myScrollspy" data-offset="0" 
+            style="height:400px; overflow:auto; position: relative;"></div>
+        </div>
+
+        <div class="button-container card col-md-6" data-spy="scroll" data-target="#myScrollspy" data-offset="0" 
+            style="height:800px; overflow:auto; position: relative;">
+            <table class="table table-striped" id="table">
+            <thead>
+                <tr>
+                    <th>相似度排名</th>
+                    <th>技能卡</th>
+                    <th>相似度</th>
+                </tr>
+            </thead>
+            </table>
+        </div>
+    </div>
+</div>  
+
+<script src="script/cardImage.js" type="module"></script>
+<script src="script/category.js" type="module"></script>
+<script src="script/guessCard.js" type="module"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>  
+</body>  
+</html>
