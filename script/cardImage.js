@@ -49,6 +49,6 @@ export function addButton(buttonId){
 function showImage(buttonId) {  
     guessCardId = buttonId;
     const displayedImage = document.getElementById('displayedImage');    
-    displayedImage.src = "../gakumas-data/images/skillCards/details/"+buttonId+".png";  
+    displayedImage.src = "kkeGuessCard/gakumas-data/images/skillCards/details/"+buttonId+".png";  
     displayedImage.style.display = 'block'; // 显示图片  
 }  
