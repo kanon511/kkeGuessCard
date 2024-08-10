@@ -34,7 +34,7 @@ export function addButton(buttonId){
 
     // 创建图片元素  
     const img = document.createElement('img');  
-    img.src = "kkeGuessCard/gakumas-data/images/skillCards/icons/"+buttonId.icon+".png";  
+    img.src = "./gakumas-data/images/skillCards/icons/"+buttonId.icon+".png";  
     img.style.width = '100%'; // 设置图片宽度填满按钮  
     img.style.maxWidth = '6rem'; // 设置图片最大宽度  
 
@@ -49,6 +49,6 @@ export function addButton(buttonId){
 function showImage(buttonId) {  
     guessCardId = buttonId;
     const displayedImage = document.getElementById('displayedImage');    
-    displayedImage.src = "kkeGuessCard/gakumas-data/images/skillCards/details/"+buttonId+".png";  
+    displayedImage.src = "./gakumas-data/images/skillCards/details/"+buttonId+".png";  
     displayedImage.style.display = 'block'; // 显示图片  
 }  
