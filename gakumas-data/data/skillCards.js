@@ -11,7 +11,7 @@ let SKILL_CARDS_BY_ID;
 $ajax(
   {
     method:"get",
-    url:"gakumas-data/json/skill_cards.json",
+    url:"kkeGuessCard/gakumas-data/json/skill_cards.json",
     ste_header:"application/json",
     success:(x)=>{
       SKILL_CARDS=JSON.parse(x);
